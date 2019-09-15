@@ -9,7 +9,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
         if(request.getParameter("cancelar")!= null){
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("discos.jsp");
         }if (request.getParameter("set")!=null){
         int index = Integer.parseInt(request.getParameter("index"));
         String nome = request.getParameter("nome");
