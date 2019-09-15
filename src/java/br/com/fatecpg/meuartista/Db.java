@@ -16,7 +16,7 @@ public class Db {
     public static ArrayList<Banda> getBanda(){
         if (banda == null){
             banda = new ArrayList<>();
-            banda.add(new Banda("Charlie Brawn Jr"));
+            banda.add(new Banda("Charlie Brown Jr"));
             banda.add(new Banda("Exaltasamba"));
             banda.add(new Banda("Jota Quest"));
             banda.add(new Banda("Linkin Park"));
