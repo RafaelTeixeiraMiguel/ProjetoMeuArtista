@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package br.com.fatecpg.meuartista;
-
 import java.util.ArrayList;
 
 /**
@@ -47,14 +46,14 @@ public class Db {
         public static ArrayList<Disco> getDisco(){
         if (disco == null){
             disco = new ArrayList<>();
-            disco.add(new Disco("Acústico MTV"));
-            disco.add(new Disco("Ao vivo 25 anos"));
-            disco.add(new Disco("Até onde vai"));
-            disco.add(new Disco("Meteora"));
-            disco.add(new Disco("Abbey Road"));
-            disco.add(new Disco("Calango"));
-            disco.add(new Disco("Nunca tem fim"));
-            disco.add(new Disco("1000 trutas 1000 tretas"));
+            disco.add(new Disco("Acústico MTV",  "Charlie Brown Jr", 1999));
+            disco.add(new Disco("Ao vivo 25 anos", "Charlie Brown Jr", 1998));
+            disco.add(new Disco("Até onde vai", "Charlie Brown Jr", 2000));
+            disco.add(new Disco("Meteora","Charlie Brown Jr", 2003));
+            disco.add(new Disco("Abbey Road", "Charlie Brown Jr", 1995));
+            disco.add(new Disco("Calango","Charlie Brown Jr", 1993));
+            disco.add(new Disco("Nunca tem fim","Charlie Brown Jr", 1995));
+            disco.add(new Disco("1000 trutas 1000 tretas","Charlie Brown Jr",2006));
         }
      return disco;
 
