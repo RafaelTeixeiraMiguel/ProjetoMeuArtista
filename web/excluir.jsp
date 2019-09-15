@@ -3,7 +3,8 @@
     Created on : 14/09/2019, 23:27:37
     Author     : AfonsoSantos
 --%>
-
+<%@page import="br.com.fatecpg.meuartista.Banda"%>
+<%@page import="br.com.fatecpg.meuartista.Db"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
