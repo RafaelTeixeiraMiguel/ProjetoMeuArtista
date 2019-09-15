@@ -18,7 +18,7 @@ public class Db {
             banda = new ArrayList<>();
             banda.add(new Banda("Charlie Brown Jr"));
             banda.add(new Banda("Exaltasamba"));
-            banda.add(new Banda("Jota Quest"));
+            banda.add(new Banda("JotaQuest"));
             banda.add(new Banda("Linkin Park"));
             banda.add(new Banda("Beatles"));
             banda.add(new Banda("Skank"));
