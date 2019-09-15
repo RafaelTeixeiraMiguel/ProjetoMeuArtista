@@ -10,10 +10,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP</title>
+        <title>MeuArtista</title>
     </head>
     <body>
-        <h1>WebMeuArtista</h1>
+        <h1>WebMeuArtist</h1>
         <h2>Indice</h2>
         <h3><a href="incluir.jsp">Incluir Banda</a></h3>
         <table border="1"> 
