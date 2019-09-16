@@ -13,7 +13,7 @@
         <title>Meu Artista</title>
     </head>
     <body>
-         <h1>WebMeuArtist</h1>
+         <h1>WebMeuArtista</h1>
         <h2>Indice</h2>
         <h3><a href="incluir.jsp">Incluir Banda</a></h3>
         <table border="1"> 
@@ -30,6 +30,7 @@
             <td>
                 <a href="alterar.jsp?index=<%= Db.getBanda().indexOf(banda)%>">Alterar</a>
                 <a href="excluir.jsp?index=<%= Db.getBanda().indexOf(banda)%>">Excluir</a>
+                <a href="incluir.jsp?index=<%= Db.getBanda().indexOf(banda)%>">Incluir</a>
             </td>
         </tr>   
         <%}%>
