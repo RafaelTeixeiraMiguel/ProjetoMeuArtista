@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Meu Artista</title>
+        <title>MeuArtista</title>
     </head>
     <body>
          <h1>WebMeuArtista</h1>
