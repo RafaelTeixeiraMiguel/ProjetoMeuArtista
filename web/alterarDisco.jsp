@@ -26,8 +26,8 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Web Contatos</h1>
-        <h2>Alterar Contatos</h2>
+        <h1>Web Disco</h1>
+        <h2>Alterar Disco</h2>
         <%try{%>
         <%int index = Integer.parseInt(request.getParameter("index"));%>
         <%Disco disco = Db.getDisco().get(index);%>
