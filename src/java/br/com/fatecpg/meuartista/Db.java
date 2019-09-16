@@ -30,14 +30,14 @@ public class Db {
         public static ArrayList<Musica> getMusica(){
         if (musica == null){
             musica = new ArrayList<>();
-            musica.add(new Musica("Acústico MTV"));
-            musica.add(new Musica("Ao vivo 25 anos"));
-            musica.add(new Musica("Até onde vai"));
-            musica.add(new Musica("Charlie Brown Jr"));
-            musica.add(new Musica("Charlie Brown Jr"));
-            musica.add(new Musica("Charlie Brown Jr"));
-            musica.add(new Musica("Charlie Brown Jr"));
-            musica.add(new Musica("Charlie Brown Jr"));
+            musica.add(new Musica("Musica 1", 0));
+            musica.add(new Musica("Musica 2", 0));
+            musica.add(new Musica("Até onde vai", 1));
+            musica.add(new Musica("Musica 3", 1));
+            musica.add(new Musica("Musica 4", 2));
+            musica.add(new Musica("Musica 5", 2));
+            musica.add(new Musica("Musica 6", 3));
+            musica.add(new Musica("Musica 7", 3));
         }
      return musica;
     }
@@ -46,14 +46,14 @@ public class Db {
         public static ArrayList<Disco> getDisco(){
         if (disco == null){
             disco = new ArrayList<>();
-            disco.add(new Disco("Acústico MTV",  "Charlie Brown Jr", 1999));
-            disco.add(new Disco("Ao vivo 25 anos", "Charlie Brown Jr", 1998));
-            disco.add(new Disco("Até onde vai", "Charlie Brown Jr", 2000));
-            disco.add(new Disco("Meteora","Charlie Brown Jr", 2003));
-            disco.add(new Disco("Abbey Road", "Charlie Brown Jr", 1995));
-            disco.add(new Disco("Calango","Charlie Brown Jr", 1993));
-            disco.add(new Disco("Nunca tem fim","Charlie Brown Jr", 1995));
-            disco.add(new Disco("1000 trutas 1000 tretas","Charlie Brown Jr",2006));
+            disco.add(new Disco("Acústico MTV",  0, 1999));
+            disco.add(new Disco("Ao vivo 25 anos", 0, 1998));
+            disco.add(new Disco("Até onde vai", 1, 2000));
+            disco.add(new Disco("Meteora",1, 2003));
+            disco.add(new Disco("Abbey Road", 2, 1995));
+            disco.add(new Disco("Calango",2, 1993));
+            disco.add(new Disco("Nunca tem fim",3, 1995));
+            disco.add(new Disco("1000 trutas 1000 tretas",3,2006));
         }
      return disco;
 

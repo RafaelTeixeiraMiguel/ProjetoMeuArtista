@@ -7,21 +7,21 @@ package br.com.fatecpg.meuartista;
 
 public class Disco {
     private String  nome;
-    private String autor;
+    private int idAutor;
     private int ano;
 
-    public Disco(String nome, String autor, int ano) {
+    public Disco(String nome, int autor, int ano) {
         this.nome = nome;
         this.ano = ano;
-        this.autor = autor;
+        this.idAutor = autor;
     }
 
-    public void setAutor(String autor) {
-        this.autor = autor;
+    public int getIdAutor() {
+        return idAutor;
     }
 
-    public String getAutor() {
-        return autor;
+    public void setIdAutor(int idAutor) {
+        this.idAutor = idAutor;
     }
 
     public void setAno(int ano) {

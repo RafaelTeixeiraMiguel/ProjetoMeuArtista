@@ -6,9 +6,20 @@ package br.com.fatecpg.meuartista;
  */
 public class Musica {
     private String nome;
+    private int idDisco;
 
-    public Musica(String nome) {
+    public int getIdDisco() {
+        return idDisco;
+    }
+
+    public void setIdDisco(int idDisco) {
+        this.idDisco = idDisco;
+    }
+    
+
+    public Musica(String nome, int idDisco) {
         this.nome = nome;
+        this.idDisco = idDisco;
     }
     
 

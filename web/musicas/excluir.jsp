@@ -1,20 +1,20 @@
 <%-- 
-    Document   : excluirDisco
-    Created on : 15/09/2019, 19:15:46
-    Author     : marinacarregosalopes
+    Document   : excluir
+    Created on : 14/09/2019, 23:27:37
+    Author     : AfonsoSantos
 --%>
-
+<%@page import="br.com.fatecpg.meuartista.Musica"%>
 <%@page import="br.com.fatecpg.meuartista.Db"%>
-<%@page import="br.com.fatecpg.meuartista.Disco"%>
+<%@page import="br.com.fatecpg.meuartista.Banda"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     if (request.getParameter("cancelar") != null) {
-        response.sendRedirect("lista-discos.jsp");
+        response.sendRedirect("lista-musicas.jsp");
     }
     if (request.getParameter("remove") != null) {
         int index = Integer.parseInt(request.getParameter("index"));
-        Db.getDisco().remove(index);
-        response.sendRedirect("lista-discos.jsp");
+        Db.getMusica().remove(index);
+        response.sendRedirect("lista-musicas.jsp");
     }
 %>
 <!DOCTYPE html>
@@ -27,10 +27,10 @@
     </head>
     <body>
         <div class="container-fluid">
-            <h1>Exluir Disco</h1>
+            <h1>Exluir Musica</h1>
             <%try {%>
             <%int index = Integer.parseInt(request.getParameter("index"));%>
-            <%Disco disco = Db.getDisco().get(index);%>
+            <%Musica musica = Db.getMusica().get(index);%>
             <form>
                 <div class="form-group row">
                     <label for="id" class="col-sm-1 col-form-label">Código:</label>
@@ -39,29 +39,17 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="nome" class="col-sm-1 col-form-label">Nome:</label>
+                    <label for="disco" class="col-sm-1 col-form-label">Disco</label>
                     <div class="col-sm-10">
-                        <input name="nome" type="text" readonly class="form-control-plaintext" id="name" value="<%=disco.getNome()%>">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="autor" class="col-sm-1 col-form-label">Autor:</label>
-                    <div class="col-sm-10">
-                        <input name="autor" type="text" readonly class="form-control-plaintext" id="autor" value="<%= Db.getBanda().get(disco.getIdAutor()).getNome()%>">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="ano" class="col-sm-1 col-form-label">Ano:</label>
-                    <div class="col-sm-10">
-                        <input name="ano" type="text" readonly class="form-control-plaintext" id="ano" value="<%=disco.getAno()%>">
+                        <input name="disco" type="text" readonly class="form-control-plaintext" id="disco" value="<%= Db.getDisco().get(musica.getIdDisco()).getNome()%>">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-danger" name="cancelar" value="Cancelar">Cancelar</button>
                 <button type="submit" class="btn btn-primary" name="remove" value="Excluir"/>Excluir</button>
             </form>
-            <%} catch (Exception ex) {%>
-            <h3>Erro ao processar o formulário</h3>
-            <%}%>
         </div>
+        <%} catch (Exception ex) {%>
+        <h3>Erro ao processar o formulário</h3>
+        <%}%>
     </body>
 </html>

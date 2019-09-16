@@ -10,33 +10,40 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <%@include file="../WEB-INF/jspf/head.jspf" %>
+        <%@include file="../WEB-INF/jspf/header.jspf" %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Discos</title>
     </head>
     <body>
-        <h1>Discos</h1>
-        <h3><a href="incluirDisco.jsp">Incluir Disco</a></h3>
-        <table border="1"> 
-            <tr>
-                <td>ID</td>
-                <td>Nome</td>
-                <td>Banda</td>
-                <td align="center" width="50"> Ano </td>
-                <td align="center">Comandos</td>
-            </tr>
-        <%for(Disco disco: Db.getDisco()){%>
-        <tr>
-            <td><%= Db.getDisco().indexOf(disco)%></td>
-            <td><%= disco.getNome()%></td>
-            <td><%= disco.getAutor()%></td>
-            <td align="center"><%= disco.getAno()%></td>
-            
-            <td>
-                <a href="alterarDisco.jsp?index=<%= Db.getDisco().indexOf(disco)%>">Alterar</a>
-                <a href="excluirDisco.jsp?index=<%= Db.getDisco().indexOf(disco)%>">Excluir</a>
-            </td>
-        </tr>   
-        <%}%>
-        </table>
+        <h3>Discos</h3>
+        <button onclick="location.href = 'incluirDisco.jsp'" type="button" class="btn btn-success">Adicionar Disco</button>
+        <div class="container">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Código</th>
+                        <th>Nome</th>
+                        <th>Banda</th>
+                        <th> Ano </th>
+                        <th>Comandos</th>
+                    </tr>
+                </thead>
+                <%for (Disco disco : Db.getDisco()) {%>
+                <tbody>
+                    <tr>
+                        <td><%= Db.getDisco().indexOf(disco)%></td>
+                        <td><%= disco.getNome()%></td>
+                        <td><%= Db.getBanda().get(disco.getIdAutor()).getNome()%></td>
+                        <td><%= disco.getAno()%></td>
+                        <td>
+                            <button onclick="location.href = 'alterarDisco.jsp?index=<%= Db.getDisco().indexOf(disco)%>'" type="button" class="btn btn-primary">Alterar</button>
+                            <button onclick="location.href = 'excluirDisco.jsp?index=<%= Db.getDisco().indexOf(disco)%>'" type="button" class="btn btn-danger">Excluir</button>
+                        </td>
+                    </tr>   
+                    <%}%>
+                </tbody>
+            </table>
+        </div>
     </body>
 </html>

@@ -1,5 +1,7 @@
 package br.com.fatecpg.meuartista;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Rafael Teixeira Miguel

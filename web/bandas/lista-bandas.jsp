@@ -16,7 +16,7 @@
     </head>
     <body>
         <h3>Listagem de Bandas</h3>
-        <button <button onclick="location.href = 'incluir.jsp'" type="button" class="btn btn-success">Adicionar Banda</button>
+        <button onclick="location.href = 'incluir.jsp'" type="button" class="btn btn-success">Adicionar Banda</button>
             <div class="container">
                 <table class="table">
                     <thead class="thead-dark">
@@ -34,7 +34,7 @@
                             <td>
                                 <button onclick="location.href = 'alterar.jsp?index=<%= Db.getBanda().indexOf(banda)%>'" type="button" class="btn btn-primary">Alterar</button>
                                 <button onclick="location.href = 'excluir.jsp?index=<%= Db.getBanda().indexOf(banda)%>'" type="button" class="btn btn-danger">Excluir</button>
-                                <button onclick="location.href = 'alterar.jsp?index=<%= Db.getBanda().indexOf(banda)%>'" type="button" class="btn btn-success">Adicionar disco</button>
+                                <!--<button onclick="location.href = 'alterar.jsp?index=<%= Db.getBanda().indexOf(banda)%>'" type="button" class="btn btn-success">Adicionar disco</button>-->
                             </td>
                         </tr>  
                     </tbody>

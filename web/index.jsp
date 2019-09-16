@@ -10,8 +10,8 @@
 <html>
     <head>
         <%@include file="WEB-INF/jspf/head.jspf" %>
-        <%@include file="WEB-INF/jspf/header.jspf" %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/base.css">
         <title>Home</title>
     </head>
     <body>
@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="col">
                                     <p>Total de músicas <%=Db.getMusica().size()%></p>
-                                    <button <button onclick="location.href='bandas/lista-bandas.jsp'" type="button" class="btn btn-dark">Bandas</button>
+                                    <button <button onclick="location.href='musicas/lista-musicas.jsp'" type="button" class="btn btn-dark">Musicas</button>
                                 </div>
                             </div>      
                     </div>
@@ -42,21 +42,21 @@
                         <h4>Integrantes</h3><br/>
                             <div class="row">
                                 <div class="col">
-                                    <img src="img/alan.jpg" class="foto"/><br/>
+                                    <img src="img/afonso.jpg" class="foto"/><br/>
                                     <p class="a">Afonso Bento</p><br/>
                                     <ul>
                                         <li>CRUD Bandas</li>
                                     </ul>
                                 </div>
                                 <div class="col">
-                                    <img src="img/alex.jpg" class="foto"/><br/>
+                                    <img src="img/marina.jpg" class="foto"/><br/>
                                     <p class="a">Marina Lopes</p><br/>   
                                     <ul>
                                         <li>CRUD Discos</li>
                                     </ul>
                                 </div>
                                 <div class="col">
-                                    <img src="img/matus.jpg" class="foto"/><br/>
+                                    <img src="img/matusalem.jpg" class="foto"/><br/>
                                     <p class="a">Matusalem Andrade</p><br/>
                                     <ul>
                                         <li>CRUD Musicas</li>
