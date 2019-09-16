@@ -9,31 +9,69 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <%@include file="WEB-INF/jspf/head.jspf" %>
+        <%@include file="WEB-INF/jspf/header.jspf" %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>MeuArtista</title>
+        <title>Home</title>
     </head>
     <body>
-        <h1>WebMeuArtist</h1>
-        <h2>Indice</h2>
-        <h3><a href="incluir.jsp">Incluir Banda</a></h3>
-        <table border="1"> 
-            <tr>
-                <td>Indice</td>
-                <td>Nome</td>
-                <td>Comandos</td>
-            </tr>
-        <%for(Banda banda: Db.getBanda()){%>
-        <tr>
-            <td><%= Db.getBanda().indexOf(banda)%></td>
-            <td><%= banda.getNome()%></td>
-            
-            <td>
-                <a href="alterar.jsp?index=<%= Db.getBanda().indexOf(banda)%>">Alterar</a>
-                <a href="excluir.jsp?index=<%= Db.getBanda().indexOf(banda)%>">Excluir</a>
-            </td>
-        </tr>   
-        <%}%>
-        </table>
-
+        <div class="container1">
+            <div>
+                <h3 class="p1">Projeto Meu Artista</h2>
+                    <p>Atividade III - POO<br/>
+                        CRUD simples para cadastro de Bandas, discos e músicas.<p>
+                        </div><br/> 
+                    <div>
+                        <h4>Listas</h3><br/>
+                            <div class="row">
+                                <div class="col">
+                                    <p>Total de bandas: <%=Db.getBanda().size()%></p>
+                                    <button <button onclick="location.href='bandas/lista-bandas.jsp'" type="button" class="btn btn-dark">Bandas</button>
+                                </div>
+                                <div class="col">
+                                    <p>Total de discos: <%=Db.getDisco().size()%></p>  
+                                    <button <button onclick="location.href='discos/lista-discos.jsp'" type="button" class="btn btn-dark">Discos</button>
+                                </div>
+                                <div class="col">
+                                    <p>Total de músicas <%=Db.getMusica().size()%></p>
+                                    <button <button onclick="location.href='bandas/lista-bandas.jsp'" type="button" class="btn btn-dark">Bandas</button>
+                                </div>
+                            </div>      
+                    </div>
+                    <div>
+                        <h4>Integrantes</h3><br/>
+                            <div class="row">
+                                <div class="col">
+                                    <img src="img/alan.jpg" class="foto"/><br/>
+                                    <p class="a">Afonso Bento</p><br/>
+                                    <ul>
+                                        <li>CRUD Bandas</li>
+                                    </ul>
+                                </div>
+                                <div class="col">
+                                    <img src="img/alex.jpg" class="foto"/><br/>
+                                    <p class="a">Marina Lopes</p><br/>   
+                                    <ul>
+                                        <li>CRUD Discos</li>
+                                    </ul>
+                                </div>
+                                <div class="col">
+                                    <img src="img/matus.jpg" class="foto"/><br/>
+                                    <p class="a">Matusalem Andrade</p><br/>
+                                    <ul>
+                                        <li>CRUD Musicas</li>
+                                    </ul>
+                                </div>
+                                <div class="col">
+                                    <img src="img/rafael.jpg" class="foto"/><br/>
+                                    <p class="a">Rafael Teixeira</p><br/>
+                                    <ul>
+                                        <li>Home</li>
+                                        <li>Front-end</li>
+                                    </ul>
+                                </div> 
+                            </div>      
+                    </div>     
+            </div>
     </body>
 </html>

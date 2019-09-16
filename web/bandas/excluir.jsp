@@ -1,23 +1,19 @@
 <%-- 
-    Document   : alterar
-    Created on : 15/09/2019, 00:13:39
+    Document   : excluir
+    Created on : 14/09/2019, 23:27:37
     Author     : AfonsoSantos
 --%>
-
-
 <%@page import="br.com.fatecpg.meuartista.Db"%>
 <%@page import="br.com.fatecpg.meuartista.Banda"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
         if(request.getParameter("cancelar")!= null){
-        response.sendRedirect("index.jsp");
-        }if (request.getParameter("set")!=null){
-        int index = Integer.parseInt(request.getParameter("index"));
-        String nome = request.getParameter("nome");
-        String autor = request.getParameter("autor");
-        int ano = Integer.parseInt(request.getParameter("ano"));
-        Db.getBanda().set(index, new Banda(nome));
-        response.sendRedirect("discos.jsp");
+            response.sendRedirect("lista-bandas.jsp");
+        }
+        if (request.getParameter("remove")!=null){
+            int index = Integer.parseInt(request.getParameter("index"));
+            Db.getDisco().remove(index);
+            response.sendRedirect("lista-bandas.jsp");
         }
  %>
 <!DOCTYPE html>
@@ -27,19 +23,18 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Web Bandas</h1>
-        <h2>Alterar Bandas</h2>
+        <h1>Exluir Banda</h1>
         <%try{%>
         <%int index = Integer.parseInt(request.getParameter("index"));%>
         <%Banda banda = Db.getBanda().get(index);%>
         <form>
-            ID:<br/>
+            Indice:<br/>
             <%=index%><br/>
-            <input type="hidden" name="index" value="<%=index%>"/><br/>
+            <input type="hidden" name="index" value="<%=index%>"/>
             Nome<br/>
-            <input type="text" name="nome" value="<%=banda.getNome()%>"/><br/>
+            <%=banda.getNome()%><br/>
             <input type="submit" name="cancelar" value="Cancelar"/><br/>
-            <input type="submit" name="set" value="Alterar"/><br/> 
+            <input type="submit" name="remove" value="Exluir"/><br/> 
         </form>
         <%}catch(Exception ex){%>
         <h3>Erro ao processar o formulário</h3>
